@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: block-platform
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    # Optional: uncomment to always get the same world (otherwise a random seed is used on each start).
+    # envVars:
+    #   - key: SEED
+    #     value: myworld
